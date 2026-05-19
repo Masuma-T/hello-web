@@ -11,7 +11,7 @@ https://masuma-t.github.io/hello-web/
 ---
 
 ## Screenshot
-
+![Portfolio Screenshot](screenshot.png)
 
 ---
 
