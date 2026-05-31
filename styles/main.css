@@ -1,0 +1,126 @@
+/* Universal Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: hsl(220, 70%, 20%);
+    --secondary-color: hsl(210, 40%, 96%);
+    --accent-color: hsl(200, 85%, 45%);
+    --text-color: hsl(220, 20%, 15%);
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 30px;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--accent-color);
+}
+
+/* Main Content */
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Content Cards */
+.content-card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+/* Section Headings */
+h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Skills List */
+.skills-list {
+    padding-left: 20px;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+/* Table Styling */
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.education-table th,
+.education-table td {
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: 12px;
+    text-align: left;
+}
+
+.education-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Social Links */
+.links-container {
+    margin-top: 15px;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 18px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover Transition */
+.social-link:hover {
+    transform: translateY(-3px);
+    background-color: hsl(200, 85%, 35%);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: hsl(220, 10%, 40%);
+}
