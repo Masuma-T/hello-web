@@ -75,6 +75,11 @@ h2 {
     margin-top: 15px;
 }
 
+.profile-image:hover {
+    transform: scale(1.05);
+    transition: 0.25s ease;
+}
+
 /* Table Styling */
 .education-table {
     width: 100%;
