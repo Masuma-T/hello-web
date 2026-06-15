@@ -25,6 +25,8 @@ This is my first personal portfolio website built using semantic HTML. It introd
 - Personal bio and career goals
 - Skills and interests list
 - Profile image inclusion
+- Flexbox was used for navigation and social links
+- Grid was used for the Projects section because it handles  two-dimensional layouts well.
 - External links (GitHub, LinkedIn, Email)
 - GitHub Pages deployment
 
