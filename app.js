@@ -279,4 +279,114 @@ projectGrid.addEventListener('click', (e) => {
   console.log(`Project clicked: ${title}`);
 });
 
+  // Week 7 — Load GitHub repositories
+  initRepos();
+  
 });
+
+/* =============================================================
+   WEEK 7 — GITHUB API
+   ============================================================= */
+
+/* Fetch repositories from GitHub */
+async function fetchRepos(username) {
+  const response = await fetch(
+    `https://api.github.com/users/${username}/repos`
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      `GitHub API request failed: ${response.status} ${response.statusText}`
+    );
+  }
+
+  return await response.json();
+}
+
+
+/* Create one GitHub repository card */
+const repoCard = (repo) => `
+  <article class="repo-card">
+
+    <h3 class="repo-title">
+      ${repo.name}
+    </h3>
+
+    <p class="repo-description">
+      ${repo.description || 'No description available.'}
+    </p>
+
+    <div class="repo-footer">
+
+      ${
+        repo.language
+          ? `<span class="tech-tag ${repo.language.toLowerCase()}">
+               ${repo.language}
+             </span>`
+          : ''
+      }
+
+      <span class="repo-stars">
+        ⭐ ${repo.stargazers_count}
+      </span>
+
+      <a
+        href="${repo.html_url}"
+        class="repo-link"
+        target="_blank"
+        rel="noopener noreferrer">
+        View on GitHub →
+      </a>
+
+    </div>
+
+  </article>
+`;
+
+
+/* Render GitHub repositories */
+function renderRepos(repos) {
+  const repoGrid = document.getElementById('repo-grid');
+
+  if (repos.length === 0) {
+    repoGrid.innerHTML = `
+      <div class="empty-state">
+        <p>No GitHub repositories found.</p>
+        <p>Check back later for new projects.</p>
+      </div>
+    `;
+    return;
+  }
+
+  repoGrid.innerHTML = repos.map(repoCard).join('');
+}
+
+
+/* Fetch and display GitHub repositories */
+async function initRepos() {
+  const loading = document.getElementById('repos-loading');
+
+  loading.classList.add('show');
+
+  try {
+    const repos = await fetchRepos('Masuma-T');
+
+    renderRepos(repos);
+
+  } catch (error) {
+
+    console.error('GitHub API error:', error);
+
+    document.getElementById('repo-grid').innerHTML = `
+      <div class="empty-state">
+        <p>Unable to load GitHub repositories.</p>
+        <p>Please try again later.</p>
+      </div>
+    `;
+
+  } finally {
+
+    loading.classList.remove('show');
+
+  }
+}
