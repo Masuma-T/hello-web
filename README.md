@@ -45,9 +45,53 @@ For Week 3, I learned when to use Flexbox and CSS Grid. I used Flexbox for the n
 
 This assignment helped me understand how modern CSS layout tools can create responsive designs without relying on media queries.
 
+For Week 4, I focused on making my portfolio fully responsive using a mobile-first approach. I added the viewport meta tag, responsive images, a fluid content container, and media queries using minimum-width breakpoints.
+
+The portfolio was tested at the required viewport sizes of 375px, 768px, and 1024px using Chrome DevTools Device Mode. The navigation adapts from a vertical layout on mobile to a horizontal layout on larger screens. The Projects section changes from one column on mobile, to two columns on tablets, and three columns on desktop.
+
+I also used CSS `clamp()` for fluid typography so that headings and text can scale smoothly between different screen sizes. CSS custom properties were used for the color palette and reusable styling values.
+
+### Responsive Design Testing
+
+#### Mobile — 375px
+
+![Portfolio at 375px](images/mobile375.png)
+
+#### Tablet — 768px
+
+![Portfolio at 768px](images/tablet768.png)
+
+#### Desktop — 1024px
+
+![Portfolio at 1024px](images/desktop1024.png)
+
+### Responsive Features
+
+* Mobile-first CSS design
+* Responsive navigation
+* Responsive project grid
+* Tablet breakpoint at 768px
+* Desktop breakpoint at 1024px
+* Fluid typography using `clamp()`
+* Responsive images using `max-width: 100%`
+* Fluid content container with a maximum width of 1200px
+* Mobile-friendly 44px tap targets
+* CSS custom properties for reusable colors and styling
+* No horizontal scrolling across tested viewport sizes
+
+
 ---
 
 ## Technologies Used
-- HTML5
-- Git & GitHub
-- GitHub Pages
+## Technologies Used
+
+* HTML5
+* CSS3
+* CSS Flexbox
+* CSS Grid
+* CSS Media Queries
+* CSS `clamp()`
+* Git & GitHub
+* GitHub Pages
+* Chrome DevTools
+
