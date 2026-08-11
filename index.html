@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
+<body id="top">
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
-            <h2 class="logo">Masuma T.</h2>
+            <a href="#top" class="logo">Masuma T.</a>
 
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -146,6 +146,21 @@
                 class="projects-grid">
             </div>
 
+        </section>
+
+                <!-- GitHub Repositories -->
+        <section id="github-repos" class="content-card">
+            <h2>GitHub Repositories</h2>
+
+            <p>
+                Explore my latest projects and repositories directly from GitHub.
+            </p>
+
+            <!-- Loading indicator -->
+            <p id="repos-loading">Loading GitHub repositories...</p>
+
+            <!-- JavaScript will render repositories here -->
+            <div id="repo-grid" class="repo-grid"></div>
         </section>
 
         <!-- Education -->
