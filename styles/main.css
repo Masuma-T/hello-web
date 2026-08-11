@@ -318,3 +318,251 @@ h3 {
         padding: 35px;
     }
 }
+
+/* =========================
+   Week 6 - JavaScript Project Controls
+========================= */
+
+.project-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    min-height: 44px;
+    padding: 10px 16px;
+
+    border: 1px solid hsl(220, 15%, 80%);
+    border-radius: 999px;
+
+    background-color: white;
+    color: var(--primary-color);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.search-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-input {
+    width: 100%;
+    min-height: 44px;
+
+    padding: 10px 14px;
+
+    border: 1px solid hsl(220, 15%, 80%);
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: var(--accent-color);
+}
+
+.results-count {
+    width: 100%;
+    font-size: 0.9rem;
+    color: hsl(220, 10%, 40%);
+}
+
+/* JavaScript-generated project cards */
+
+.project-card {
+    background-color: var(--secondary-color);
+
+    padding: 20px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    animation: project-card-in 0.3s ease both;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes project-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.week-badge {
+    display: inline-block;
+
+    align-self: flex-start;
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    background-color: white;
+    color: var(--primary-color);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+}
+
+.card-desc {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.tech-tag {
+    display: inline-block;
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tech-tag.html {
+    background-color: hsl(20, 85%, 50%);
+}
+
+.tech-tag.css {
+    background-color: hsl(220, 70%, 45%);
+}
+
+.tech-tag.javascript {
+    background-color: hsl(45, 85%, 40%);
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 44px;
+
+    color: var(--accent-color);
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: var(--primary-color);
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: hsl(220, 10%, 40%);
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+/* Week 6 responsive controls */
+
+@media (min-width: 768px) {
+    .project-controls {
+        align-items: center;
+    }
+
+    .results-count {
+        width: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-btn {
+        flex: 1;
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+}

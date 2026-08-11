@@ -75,35 +75,77 @@
 
         <!-- Projects -->
         <section id="projects" class="content-card">
+
             <h2>Projects</h2>
 
-            <div class="projects-grid">
+            <!-- Search and Filter Controls -->
+            <div class="project-controls">
 
-                <article class="project-card">
-                    <h3>EV Adoption Analysis</h3>
-                    <p>
-                        Conducted trend analysis on electric vehicle adoption rates
-                        using data analytics and visualization techniques.
-                    </p>
-                </article>
+                <div class="filter-group">
 
-                <article class="project-card">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>
-                        Designed and developed a personal portfolio using HTML,
-                        CSS, Flexbox, and CSS Grid.
-                    </p>
-                </article>
+                    <button
+                        type="button"
+                        class="filter-btn active"
+                        data-filter="all">
+                        All
+                    </button>
 
-                <article class="project-card">
-                    <h3>Awesome Chocolates Dashboard</h3>
-                    <p>
-                        Built SQL queries and Power BI dashboards to analyze sales
-                        performance and customer engagement.
-                    </p>
-                </article>
-                
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="html">
+                        HTML
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="css">
+                        CSS
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="javascript">
+                        JavaScript
+                    </button>
+
+                </div>
+
+                <!-- Search -->
+                <div class="search-wrapper">
+
+                    <label
+                        for="search-input"
+                        class="visually-hidden">
+                        Search projects
+                    </label>
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        class="search-input"
+                        placeholder="Search projects..."
+                        autocomplete="off">
+
+                </div>
+
+                <!-- Results Count -->
+                <p
+                    id="results-count"
+                    class="results-count">
+                    Showing 0 of 0 projects
+                </p>
+
             </div>
+
+            <!-- JavaScript will create project cards here -->
+            <div
+                id="project-grid"
+                class="projects-grid">
+            </div>
+
         </section>
 
         <!-- Education -->
@@ -111,6 +153,7 @@
             <h2>Education & Certifications</h2>
 
             <table class="education-table">
+
                 <tr>
                     <th>Program</th>
                     <th>Institution</th>
@@ -135,52 +178,64 @@
                     <td>Microsoft Azure AZ-900</td>
                     <td>Microsoft</td>
                 </tr>
+
             </table>
         </section>
 
         <!-- Profile Picture -->
         <section class="content-card">
+
             <h2>Profile Picture</h2>
 
             <img
                 src="images/profile.jpg"
                 alt="Profile photo of Masuma Tahir"
                 class="profile-image">
+
         </section>
 
         <!-- Contact -->
         <section id="contact" class="content-card">
+
             <h2>Connect With Me</h2>
 
             <div class="links-container">
 
-                <a href="https://github.com/Masuma-T"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="social-link">
+                <a
+                    href="https://github.com/Masuma-T"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link">
                     GitHub
                 </a>
 
-                <a href="https://www.linkedin.com/in/masoomatahir/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="social-link">
+                <a
+                    href="https://www.linkedin.com/in/masoomatahir/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link">
                     LinkedIn
                 </a>
 
-                <a href="mailto:masuamt00@gmail.com"
-                   class="social-link">
+                <a
+                    href="mailto:masuamt00@gmail.com"
+                    class="social-link">
                     Email
                 </a>
 
             </div>
+
         </section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2026 Masuma Tahir</p>
     </footer>
+
+    <!-- Week 6 JavaScript -->
+    <script src="app.js"></script>
 
 </body>
 
