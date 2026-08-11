@@ -80,9 +80,48 @@ I also used CSS `clamp()` for fluid typography so that headings and text can sca
 * No horizontal scrolling across tested viewport sizes
 
 
+For Week 6, I upgraded my portfolio from a static webpage into a dynamic and interactive application using vanilla JavaScript and DOM manipulation.
+
+I created a JavaScript projects data array containing five projects completed during the course. Each project includes its title, technology, week number, description, and project link. The projects are rendered dynamically onto the portfolio using JavaScript template literals and DOM manipulation.
+
+I also added interactive filtering and search functionality. Users can filter projects by HTML, CSS, or JavaScript, and the project list updates automatically based on the selected category. The search feature allows users to search for projects by title or description and updates the results as the user types.
+
+I also implemented an Escape key feature that clears the search field and restores the project results. The results counter updates dynamically to show how many projects are currently displayed. Event delegation was also used on the project grid to detect project link interactions.
+
+This assignment helped me understand how JavaScript can transform a static webpage into an interactive application. I learned how to work with arrays of objects, template literals, DOM elements, event listeners, filtering, and live search functionality.
+
+I also learned how important it is to organize JavaScript separately from the HTML and CSS while connecting all three technologies together. Incorporating the Week 6 functionality directly into my existing portfolio helped me understand how new features can be added to an existing project without rebuilding the entire website.
+
+### Week 6 Screenshots
+
+#### Project Filter
+
+The JavaScript filter displays only projects that use JavaScript.
+
+![Week 6 Filter](images/filter-css.png)
+
+#### Project Search
+
+The search feature filters the projects based on the user's search term.
+
+![Week 6 Search](images/responsive-search.png)
+
+
+## Week 7 – GitHub API Integration
+
+For Week 7, I connected my portfolio to the GitHub API using JavaScript's Fetch API and async/await. The GitHub Repositories section dynamically retrieves my public repositories from GitHub and displays them as repository cards.
+
+The repository cards display the repository name, description, primary programming language, star count, and a link to the repository on GitHub. The application also handles repositories without descriptions or programming languages without displaying null values.
+
+Because the repositories are fetched directly from the GitHub API, new public repositories can automatically appear on my portfolio without manually adding them to the HTML.
+
+### GitHub API Screenshot
+
+![GitHub Repositories](images/github-repositories.png)
+
 ---
 
-## Technologies Used
+
 ## Technologies Used
 
 * HTML5
@@ -91,6 +130,10 @@ I also used CSS `clamp()` for fluid typography so that headings and text can sca
 * CSS Grid
 * CSS Media Queries
 * CSS `clamp()`
+* DOM Manipulation
+* Event Listeners
+* Template Literals
+* Javascript
 * Git & GitHub
 * GitHub Pages
 * Chrome DevTools
